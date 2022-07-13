@@ -10,8 +10,8 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!--Khai bao vi tri dat class là controller, service..-->
-    <context:component-scan base-package="vn.codegym"/>
+    <!--Khai bao vi tri dat class là all.controller, service..-->
+    <context:component-scan base-package="all"/>
     <mvc:annotation-driven/>
 
     <!--Khai bao vi tri dat view, duoi file cua view-->
@@ -20,16 +20,16 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-<!--    <bean id="viewResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">-->
-<!--        <property name="prefix" value="/WEB-INF/views/"/>-->
-<!--        <property name="suffix" value=".html"/>-->
-<!--    </bean>-->
+    <!--    <bean id="viewResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">-->
+    <!--        <property name="prefix" value="/WEB-INF/views/"/>-->
+    <!--        <property name="suffix" value=".html"/>-->
+    <!--    </bean>-->
 
-<!--    <bean id="engine" class="org.thymeleaf.spring4.SpringTemplateEngine">-->
-<!--        <property name="templateResolver" ref="viewResolver"/>-->
-<!--    </bean>-->
+    <!--    <bean id="engine" class="org.thymeleaf.spring4.SpringTemplateEngine">-->
+    <!--        <property name="templateResolver" ref="viewResolver"/>-->
+    <!--    </bean>-->
 
-<!--    <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">-->
-<!--        <property name="templateEngine" ref="engine"/>-->
-<!--    </bean>-->
+    <!--    <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">-->
+    <!--        <property name="templateEngine" ref="engine"/>-->
+    <!--    </bean>-->
 </beans>
