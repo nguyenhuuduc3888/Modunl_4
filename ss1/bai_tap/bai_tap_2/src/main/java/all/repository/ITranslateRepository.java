@@ -1,5 +1,7 @@
 package all.repository;
 
+import java.util.Map;
+
 public interface ITranslateRepository {
-    String translate(String keySearch);
+    Map<String, String> getData();
 }
