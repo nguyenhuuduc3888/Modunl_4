@@ -20,12 +20,11 @@ public class CalculatorService implements ICalculatorService {
                 result = num1 * num2;
                 break;
             case "/":
-                try {
+                if (num2 != 0) {
                     result = num1 / num2;
-                } catch (ArithmeticException e) {
-                    e.printStackTrace();
+                } else {
+                    throw new RuntimeException("Khong chia cho 0");
                 }
-                break;
         }
         return result;
     }

@@ -19,8 +19,7 @@
     </span>
 </form>
 <h3>
-    <c:if test='${err.equals("")}'> result: ${result} </c:if>
-    <c:if test='${!err.equals("")}'> result: ${err}</c:if>
+     result: ${result}
 </h3>
 </body>
 </html>
