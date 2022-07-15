@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee689e01-6840-4890-9b12-b3849de2e351" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/src/main/java/all/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/src/main/java/all/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/src/main/webapp/WEB-INF/views/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/src/main/webapp/WEB-INF/views/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_01/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/java/all/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/java/all/model/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/java/all/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/java/all/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/java/all/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/java/all/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/java/all/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh/thuc_hanh_02/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/build/classes/java/main/com/example/controller/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/build/libs/ss1-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/src/main/java/com/example/controller/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/src/main/webapp/WEB-INF/views/greeting.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/build/classes/java/main/all/controller/SandwichController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/build/classes/java/main/all/controller/SandwichController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/build/libs/bai_tap_1-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/build/libs/bai_tap_1-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/src/main/java/all/controller/SandwichController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/src/main/java/all/controller/SandwichController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/src/main/webapp/WEB-INF/views/checkbox.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/src/main/webapp/WEB-INF/views/checkbox.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/src/main/webapp/WEB-INF/views/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_1/src/main/webapp/WEB-INF/views/result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_2/src/main/java/all/controller/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap/bai_tap_2/src/main/java/all/controller/CalculatorController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2BxX1Ohlio7mfLOLNuattd3YgeP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee689e01-6840-4890-9b12-b3849de2e351" name="Default Changelist" comment="" />
+      <created>1657848493895</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657848493895</updated>
+      <workItem from="1657848498511" duration="65000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1657848561882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1657848561882" />
+    <state x="65" y="0" key="new project wizard" timestamp="1657848563555">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1657848563555" />
+  </component>
+</project>
