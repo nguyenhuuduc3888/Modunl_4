@@ -11,7 +11,6 @@
     </div>
 </div>
 <h3>Product</h3>
-
 <div id="search">
     <form th:action="@{/search}" >
         <input type="text" placeholder="Input Search Name" name="name">
@@ -28,7 +27,6 @@
 <table id="products">
     <thead>
     <tr>
-        <th>STT</th>
         <th>Id</th>
         <th>Name</th>
         <th>Price</th>
@@ -41,7 +39,6 @@
     </thead>
     <tbody>
     <tr th:each="row,rowStat : ${products}">
-        <td th:text="${rowStat.count}"></td>
         <td th:text="${row.getProductId()}"></td>
         <td th:text="${row.getProductName()}"></td>
         <td th:text="${row.getProductPrice()}"></td>

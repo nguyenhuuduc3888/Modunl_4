@@ -60,12 +60,12 @@ public class ProductController {
 
     @PostMapping("/delete")
     public String delete(@ModelAttribute Product product, RedirectAttributes redirectAttributes) {
-        productService.delete(product);
+        productService.delete(product.getProductId());
         redirectAttributes.addFlashAttribute("success", "Delete ok !");
         return "redirect:/index";
     }
 
-    //Xem chi tiet
+
     @GetMapping("/{id}/view")
     public String view(@PathVariable int id, Model model) {
         Product product = productService.findById(id);
@@ -73,11 +73,10 @@ public class ProductController {
         return "/view";
     }
 
-    //tim theo ten
     @GetMapping("/search")
-  public    String searchByName(@RequestParam String name, Model model) {
-        List<Product> searchList = productService.findByName(name);
-        model.addAttribute("searchList", searchList);
+    public String searchByName(@RequestParam String name, Model model) {
+        List<Product> products = productService.findByName(name);
+        model.addAttribute("products", products);
         return "/index";
     }
 

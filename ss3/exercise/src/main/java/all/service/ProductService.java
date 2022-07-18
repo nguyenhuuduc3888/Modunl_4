@@ -29,12 +29,12 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void delete(Product product) {
-
+    public void delete(int id) {
         for (int i = 0; i < productList.size(); i++) {
-            if (productList.get(i).getProductId() == product.getProductId()) ;
-            productList.remove(i);
-            break;
+            if (productList.get(i).getProductId() == id) {
+                productList.remove(productList.get(i));
+                break;
+            }
         }
     }
 
