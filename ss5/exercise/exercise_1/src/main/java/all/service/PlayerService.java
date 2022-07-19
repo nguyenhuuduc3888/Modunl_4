@@ -13,6 +13,16 @@ public class PlayerService implements IPlayerService {
     IPlayerRepository playerRepository;
 
     @Override
+    public Player findById(int id) {
+        return playerRepository.findById(id);
+    }
+
+    @Override
+    public void delete(Player player) {
+        playerRepository.delete(player);
+    }
+
+    @Override
     public List<Player> findAll() {
         return playerRepository.findAll();
     }
@@ -26,15 +36,4 @@ public class PlayerService implements IPlayerService {
     public void update(Player player) {
         playerRepository.update(player);
     }
-
-    @Override
-    public void delete(Player player) {
-        playerRepository.delete(player);
-    }
-
-    @Override
-    public Player findById(int id) {
-        return playerRepository.findById(id);
-    }
-
 }

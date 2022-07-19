@@ -33,14 +33,14 @@ public class PlayerRepository implements IPlayerRepository {
     }
 
     @Override
-    public void delete(Player player) {
-        entityManager.remove(player);
+    @Modifying
+    public Player findById(int id) {
+        return entityManager.find(Player.class, id);
     }
 
     @Override
-    @Modifying
-    public Player findById(int id) {
-        return entityManager.find(Player.class,id);
+    public void delete(Player player) {
+        entityManager.remove(player);
     }
 
 }
