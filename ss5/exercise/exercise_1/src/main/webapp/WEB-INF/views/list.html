@@ -50,7 +50,6 @@
         <th>LINK</th>
         <th>Edit</th>
         <th>Delete</th>
-
     </tr>
     </thead>
     <tbody>
@@ -83,8 +82,7 @@
                             with id = <span class="text-info" th:text="${row.id}"></span>
                         </div>
                         <div class="modal-footer">
-                            <a th:href="@{/delete(id=${row.id})}"
-                               class="btn btn-outline-success">Delete</a>
+                            <a th:href="@{/delete(id=${row.id})}" class="btn btn-outline-success">Delete</a>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>

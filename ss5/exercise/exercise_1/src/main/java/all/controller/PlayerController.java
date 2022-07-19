@@ -35,7 +35,7 @@ public class PlayerController {
     }
 //Xoa
     @GetMapping("/delete")
-    public String delete(@RequestParam int id, Model model) {
+    public String delete(@RequestParam int id) {
         Player player = playerService.findById(id);
         playerService.delete(player);
         return "redirect:list";
