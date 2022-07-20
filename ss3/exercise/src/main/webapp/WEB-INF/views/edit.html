@@ -11,11 +11,11 @@
 </p>
 <div id="form">
     <form action="#" th:action="@{/edit}" th:object="${product}"
-          method="POST" >
+          method="POST">
         <input type="hidden" th:field="*{productId}"/>
         <div>
             <label>Name</label>
-            <input required pattern="[a-zA-Z'-'\s]*" type="text" th:field="*{productName}"/>
+            <input required type="text" th:field="*{productName}"/>
         </div>
         <div>
             <label>Price</label>

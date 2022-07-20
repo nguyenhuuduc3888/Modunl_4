@@ -1,16 +1,34 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 18/07/2022
-  Time: 3:18 CH
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1><a href="/form"> Create</a></h1>
+    <table border="1px">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>DAY OF BIRTH</th>
+            <th>TRAVEL</th>
+            <th>END DAY</th>
+            <th>START DAY</th>
+            <th> GO DAY</th>
+            <th>Edit</th>
+        </tr>
+        <c:forEach items="${person}" var="person">
+        <tr>
+            <td>${person.id}</td>
+            <td>${person.name}</td>
+            <td>${person.dayOfBirth}</td>
+            <td>${person.travelInformation}</td>
+            <td>${person.startDay}</td>
+            <td>${person.endDay}</td>
+            <td>${person.goDay}</td>
+            <td><a href="/update?id=${person.id}"> edit</a></td>
+        </tr>
+        </c:forEach>
+    </table>
 </body>
 </html>

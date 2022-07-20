@@ -18,8 +18,8 @@ public class PlayerService implements IPlayerService {
     }
 
     @Override
-    public void delete(Player player) {
-        playerRepository.delete(player);
+    public void delete(int id) {
+        playerRepository.delete(id);
     }
 
     @Override

@@ -20,12 +20,6 @@
     </form>
 </div>
 
-<p>
-    <a th:href="@{/create}">
-        Add new product
-    </a>
-</p>
-
 <table id="products">
     <thead>
     <tr>
@@ -34,24 +28,24 @@
         <th>Price</th>
         <th>Description</th>
         <th>Producer</th>
-        <th>Edit</th>
         <th>Delete</th>
-        <th>View</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="row,rowStat : ${products}">
-        <td th:text="${row.getProductId()}"></td>
-        <td th:text="${row.getProductName()}"></td>
-        <td th:text="${row.getProductPrice()}"></td>
-        <td th:text="${row.getProductDescription()}"></td>
+    <tr th:each="row : ${products}">
+        <td th:text="${row.getId()}"></td>
+        <td th:text="${row.getName()}"></td>
+        <td th:text="${row.getPrice()}"></td>
+        <td th:text="${row.getDescription()}"></td>
         <td th:text="${row.getProducer()}"></td>
-        <td><a th:href="@{/{id}/edit(id=${row.getProductId()})}">edit</a></td>
-        <td><a th:href="@{/{id}/delete(id=${row.getProductId()})}">delete</a></td>
-        <td><a th:href="@{/{id}/view(id=${row.getProductId()})}">view</a></td>
+
+        <td><a th:href="@{/{id}/delete(id=${row.getId()})}">delete</a></td>
+
     </tr>
     </tbody>
 </table>
 <footer th:replace="/layout :: footer"></footer>
+
+
 </body>
 </html>

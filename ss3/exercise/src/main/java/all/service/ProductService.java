@@ -2,14 +2,14 @@ package all.service;
 
 import all.model.Product;
 import all.repository.IProductRepository;
+
 import all.repository.ProductRepository;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class ProductService implements IProductService {
+
     IProductRepository productRepository = new ProductRepository();
     List<Product> productList = productRepository.getData();
 
@@ -62,6 +62,5 @@ public class ProductService implements IProductService {
         updateProduct.setProductDescription(product.getProductDescription());
         updateProduct.setProducer(product.getProducer());
     }
-
 
 }

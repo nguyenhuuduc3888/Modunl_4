@@ -1,4 +1,9 @@
 package all.repository;
 
-public interface IProduct {
+import all.model.Product;
+
+import java.util.List;
+
+public interface IProductRepository {
+    List<Product> getData();
 }

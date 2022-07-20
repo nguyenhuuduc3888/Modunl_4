@@ -5,25 +5,12 @@
 </head>
 <body>
 <h4>Tờ khai y tế</h4>
-<p>Họ tên: ${person.fullName}</p>
-<p>Năm sinh: ${person.yearOfBirth}</p>
-<p>Giới tính: ${person.gender}</p>
-<p>Quốc tịch: ${person.nationality}</p>
-<p>Số hộ chiếu/CMND: ${person.idCard}</p>
-<p>Thông tin đi lại: ${person.travelInfo}</p>
-<p>Số hiệu phương tiện: ${person.signalPlate}</p>
-<p>Số ghế: ${person.seatNumber}</p>
-<span>
-    Ngày khởi hành: ${person.startDay}
-/ ${person.startMonth}
-/${person.startYear}
-</span>
-<span>
-    Ngày kết thúc: ${person.endDay}
-/ ${person.endMonth}
-/ ${person.endYear}
-</span>
-
-<p>Trong vòng 14 ngày qua: ${person.travel14DaysInfo}</p>
+<p>Họ tên: ${person.name}</p>
+<p>Năm sinh: ${person.dayOfBirth}</p>
+<p>Thông tin đi lại: ${person.travelInformation}</p>
+<p> Ngày khởi hành: ${person.startDay}</p>
+<p>Ngày kết thúc: ${person.endDay}</p>
+<p>Trong vòng 14 ngày qua: ${person.goDay}</p>
+<hr>
 </body>
 </html>

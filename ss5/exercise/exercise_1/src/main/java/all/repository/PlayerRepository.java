@@ -35,11 +35,13 @@ public class PlayerRepository implements IPlayerRepository {
     @Override
     @Modifying
     public Player findById(int id) {
-        return entityManager.find(Player.class, id);
+        TypedQuery<Player> query = entityManager.createQuery("select s from Player as s where s.id = : id", Player.class).setParameter("id", id);
+        return query.getSingleResult();
     }
 
     @Override
-    public void delete(Player player) {
+    public void delete(int id) {
+        Player player = findById(id);
         entityManager.remove(player);
     }
 

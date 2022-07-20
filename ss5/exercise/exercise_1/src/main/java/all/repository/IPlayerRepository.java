@@ -11,7 +11,7 @@ public interface IPlayerRepository {
 
     void update( Player player);
 
-    void delete(Player player);
+    void delete(int id);
 
     Player findById(int id);
 

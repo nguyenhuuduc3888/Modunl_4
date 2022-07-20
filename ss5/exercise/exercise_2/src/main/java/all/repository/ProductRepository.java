@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
+import java.lang.reflect.Type;
 import java.util.List;
 
 @Repository
@@ -35,11 +36,13 @@ public class ProductRepository implements IProductRepository {
     @Override
     @Modifying
     public Product findById(int id) {
-        return entityManager.find(Product.class, id);
+       TypedQuery<Product> query = entityManager.createQuery("select s from Product as s where s.id = : id", Product.class).setParameter("id", id);
+       return query.getSingleResult();
     }
 
     @Override
-    public void delete(Product product) {
+    public void delete(int id) {
+        Product product = findById(id);
         entityManager.remove(product);
     }
 
