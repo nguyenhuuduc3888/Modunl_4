@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+
+<h3>Add Player</h3>
+<p>
+    <a th:href="@{/list}">
+        Back to PlayerList
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/save}" th:object="${player}" method="POST">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name</label>
+            <input required type="text" th:field="*{musicName}"/>
+        </div>
+        <div>
+            <label>Person</label>
+            <input required  type="text" th:field="*{personName}"/>
+        </div>
+        <div>
+            <label>Rent</label>
+            <input required type="text" th:field="*{rentMusic}"/>
+        </div>
+        <div>
+            <label>Link</label>
+            <input required type="text" th:field="*{link}"/>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+
+<footer th:replace="/layout :: footer">
+</footer>
+</body>
+</html>
