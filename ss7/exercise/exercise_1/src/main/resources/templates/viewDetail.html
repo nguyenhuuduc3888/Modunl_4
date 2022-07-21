@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<h3>Blog</h3>
+<p>
+    <a th:href="@{/list}">Back list Blog </a>
+</p>
+<p th:test="${blog.category.categoryName}"></p>
+<p th:text="${blog.blogDetail}"></p>
+</body>
+</html>
