@@ -18,6 +18,6 @@ public interface IProductRepository extends JpaRepository<Product, Integer> {
     @Query(value = "update Product set product_name =:productName,product_price=:productPrice,producer=:producer where id=:id", nativeQuery = true)
     void update(@Param("productName") String productName, @Param("productPrice") String productPrice, @Param("producer") String producer, @Param("id") int id);
 
-    @Query(value = " select * from product where product_name like :s ", nativeQuery = true)
-    Page<Product> findAll(Pageable pageable,@Param("s") String s);
+    @Query(value = " select * from product where product_name like :name ", nativeQuery = true)
+    Page<Product> findAll(Pageable pageable,@Param("name") String name);
 }

@@ -27,6 +27,7 @@ public class ProductController {
     @GetMapping("/list")
     public String showList(@PageableDefault(value = 3) Pageable pageable, Model model,
                            @RequestParam Optional<String> name) {
+        //tim theo name...neu rong thi tra ve full list
         model.addAttribute("product", productService.findAll(pageable,name.orElse("")));
         return "/list";
     }
