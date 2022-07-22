@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Edit Player</h3>
+<p>
+    <a th:href="@{/list}">
+        Back to player list
+    </a>
+</p>
+<div id="form">
+    <form action="#" th:action="@{/edit}" th:object="${playerDto}" method="POST">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name</label>
+            <p th:if="${#fields.hasErrors('musicName')}" th:errors="*{musicName}"></p>
+            <input  type="text" th:field="*{musicName}"/>
+        </div>
+        <div>
+            <label>Person</label>
+            <p th:if="${#fields.hasErrors('personName')}" th:errors="*{personName}"></p>
+            <input  type="text" th:field="*{personName}"/>
+        </div>
+        <div>
+            <label>Rent</label>
+            <p th:if="${#fields.hasErrors('rentMusic')}" th:errors="*{rentMusic}"></p>
+            <input  type="text" th:field="*{rentMusic}"/>
+        </div>
+        <div>
+            <label>Link</label>
+            <p th:if="${#fields.hasErrors('link')}" th:errors="*{link}"></p>
+            <input  type="text" th:field="*{link}"/>
+        </div>
+        <input type="submit" value="edit"/>
+    </form>
+</div>
+<footer th:replace="/layout :: footer">
+</footer>
+</body>
+</html>

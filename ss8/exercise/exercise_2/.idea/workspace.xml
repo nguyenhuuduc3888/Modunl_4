@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="daefbf9d-87fa-45f4-95d9-0e43ce620112" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss3/exercise/.idea/exercise.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/java/com/Exercise1Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/java/com/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/java/com/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/java/com/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/java/com/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/java/com/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/java/com/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_1/src/test/java/com/Exercise1ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/PlayerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dto/PlayerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/model/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/repository/IPlayerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/IPlayerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/PlayerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/java/com/Exercise3Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/java/com/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/java/com/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/java/com/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/java/com/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/java/com/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/java/com/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_3/src/test/java/com/Exercise3ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/build/classes/java/main/all/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/build/classes/java/main/all/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/build/libs/bai_tap-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/build/libs/bai_tap-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/src/main/java/all/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/src/main/java/all/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss3/exercise/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss3/exercise/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/build/classes/java/main/all/controller/PlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/build/classes/java/main/all/controller/PlayerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/build/classes/java/main/all/repository/ConnectionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/build/classes/java/main/all/repository/ConnectionUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/build/libs/exercise_1-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/build/libs/exercise_1-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/src/main/java/all/controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/src/main/java/all/controller/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_1/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/repository/IProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/repository/IProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/service/IProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/classes/java/main/all/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/libs/exercise_1-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/build/libs/exercise_1-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/java/all/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/exercise/exercise_2/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/config/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/config/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/repository/BlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/repository/BlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/repository/IBlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/java/all/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/webapp/WEB-INF/views/viewDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_1/src/main/webapp/WEB-INF/views/viewDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/repository/IBlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/java/com/example/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/exercise/exercise_2/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/practice/practice1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/practice/practice1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6/practice/practice1/src/main/java/all/config/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6/practice/practice1/src/main/java/all/config/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/createCategory.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/createCategory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/listCategory.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7/exercise/exercise_1/src/main/resources/templates/listCategory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7/exercise/exercise_2/src/main/java/com/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7/exercise/exercise_2/src/main/java/com/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7/exercise/exercise_2/src/main/java/com/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7/exercise/exercise_2/src/main/java/com/service/ProductService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CHJNfYg8rMCGNymdeTgEOFOB37" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Modunl_4/ss8/exercise/exercise_2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;481af5b7384c2ff5b4503de11bf3ce83&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Modunl_4\ss8\exercise\exercise_2\src\main\resources\templates" />
+      <recent name="D:\Modunl_4\ss8\exercise\exercise_2\src\main\java\com" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Exercise2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="exercise_2.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Exercise2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="daefbf9d-87fa-45f4-95d9-0e43ce620112" name="Changes" comment="" />
+      <created>1658453539962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658453539962</updated>
+      <workItem from="1658453541489" duration="5053000" />
+      <workItem from="1658460007151" duration="61000" />
+      <workItem from="1658460157225" duration="608000" />
+      <workItem from="1658472964453" duration="1189000" />
+      <workItem from="1658474982667" duration="2352000" />
+      <workItem from="1658480468026" duration="471000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
