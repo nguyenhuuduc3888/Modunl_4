@@ -24,10 +24,53 @@
 </div>
 
 <p>
-    <a th:href="@{/create}">
-        Add new product
-    </a>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropCreate">
+        Create
+    </button>
+
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdropCreate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabelCreate">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form th:action="@{/save}" th:object="${product}"
+                  method="POST">
+                <div class="modal-body">
+
+                    <input type="hidden" th:field="*{productId}"/>
+                    <div>
+                        <label>Name</label>
+                        <input required type="text" class="form-control" th:field="*{productName}"/>
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input required pattern="[0-9]+([\.][0-9]{0,2})?" type="text" class="form-control" th:field="*{productPrice}"/>
+                    </div>
+                    <div>
+                        <label>Description</label>
+                        <input required type="text" class="form-control" th:field="*{productDescription}"/>
+                    </div>
+                    <div>
+                        <label>Producer</label>
+                        <input required type="text" class="form-control" th:field="*{producer}"/>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-outline-success" value="Save"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </p>
+
 
 <table id="products" class="table table-hover">
     <thead>
@@ -50,9 +93,90 @@
         <td th:text="${row.getProductPrice()}"></td>
         <td th:text="${row.getProductDescription()}"></td>
         <td th:text="${row.getProducer()}"></td>
-        <td><a th:href="@{/{id}/edit(id=${row.getProductId()})}">edit</a></td>
-        <td><a th:href="@{/{id}/view(id=${row.getProductId()})}">view</a></td>
-        <!--        <td><a th:href="@{/{id}/delete(id=${row.getProductId()})}">delete</a></td>-->
+        <td>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    th:data-bs-target="'#staticBackdropEdit' + ${row.productId}">
+                Edit
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" th:id="staticBackdropEdit + ${row.productId}" data-bs-backdrop="static"
+                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabelEdit">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="/edit" method="post">
+                        <div class="modal-body">
+                                <div class="container-fluid">
+                                    <input type="hidden" class="form-control" name="id" th:value="${row.productId}"/>
+                                    <label>Name</label>
+                                    <input required type="text" class="form-control" name="name" th:value="${row.productName}"/>
+                                    <label>Price</label>
+                                    <input required pattern="[0-9]+([\.][0-9]{0,2})?" type="text"
+                                           th:value="${row.productPrice}" name="price" class="form-control" />
+                                    <label>Description</label>
+                                    <input required type="text" class="form-control" name="description" th:value="${row.productDescription}"/>
+                                    <label>Producer</label>
+                                    <input required type="text" class="form-control" name="producer" th:value="${row.producer}"/>
+                                </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" th:data-bs-target="'#staticBackdropView' + ${row.productId}">
+                View
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" th:id="'staticBackdropView' + ${row.productId}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabelView">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Description</th>
+                                    <th>Producer</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td th:text="${row.productId}"></td>
+                                    <td th:text="${row.productName}"></td>
+                                    <td th:text="${row.productPrice}"></td>
+                                    <td th:text="${row.productDescription}"></td>
+                                    <td th:text="${row.producer}"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
         <td>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
@@ -61,7 +185,7 @@
             </button>
 
             <!-- Modal -->
-            <div class="modal fade" th:id="staticBackdrop + ${row.productId}" data-bs-backdrop="static"
+            <div class="modal fade" th:id="'staticBackdrop' + ${row.productId}" data-bs-backdrop="static"
                  data-bs-keyboard="false"
                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -83,7 +207,6 @@
                 </div>
             </div>
         </td>
-
     </tr>
     </tbody>
 </table>
