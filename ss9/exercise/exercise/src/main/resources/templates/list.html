@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body style="background-color: lightgoldenrodyellow">
+<h1 style="color: chocolate ;font-family:Gabriola ">Library Book</h1>
+<!-- Search -->
+<div id="search">
+    <form th:action="@{/list}">
+        <input type="text" placeholder="Input Book Name" name="name">
+        <input type="submit" value="Search Book">
+    </form>
+</div>
+<!-- Create -->
+<button style="background-color: navajowhite ;border-radius: 10px">
+    <h3>
+        <a th:href="@{/create}" style="text-decoration: none ;color: chocolate">Create New Book</a>
+    </h3>
+</button>
+
+<table id="products" class="table table-hover">
+    <thead>
+    <tr>
+        <th>Stt</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Amount</th>
+        <th>Borrow</th>
+        <th>Return</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book,rowStar: ${bookList}">
+        <td th:text="${rowStar.count}"></td>
+        <td th:text="${book.getName()}"></td>
+        <td th:text="${book.getAuthor()}"></td>
+        <td th:text="${book.getAmount()}"></td>
+        <td>
+            <button style="background-color: navajowhite ;border-radius: 10px;width: 100%;height: 100%">
+                <h3>
+                    <a th:href="@{/borrow(id=${book.id})}" style="text-decoration: none;color: chocolate">Borrow
+                        Book</a>
+                </h3>
+            </button>
+        </td>
+        <td>
+            <button style="background-color: navajowhite ;border-radius: 10px;width: 100%;height: 100%">
+                <h3>
+                    <a th:href="@{/return(id=${book.id})}" style="text-decoration: none;color: chocolate">Return
+                        Book</a>
+                </h3>
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<!--Phân Trang -->
+<center>
+    <a th:href="@{'/list'(page=${bookList.number - 1},name = ${name})}" th:if="${bookList.hasPrevious()}">Previous</a>
+    <span th:text="${bookList.number + 1}"></span>/<span th:text="${bookList.totalPages}"></span>
+    <a th:href="@{'/list'(page=${bookList.number + 1},name = ${name})}" th:if="${bookList.hasNext()}">Next</a>
+</center>
+<footer th:replace="/layout :: footer">
+</footer>
+</body>
+</html>

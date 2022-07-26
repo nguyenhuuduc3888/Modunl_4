@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body style="background-color: lightgoldenrodyellow">
+<h1 style="color: chocolate ;font-family:Gabriola ">Create Book</h1>
+<button style="background-color: navajowhite ;border-radius: 10px">
+    <h2>
+        <a th:href="@{/list}" style="text-decoration: none ;color: chocolate">Back to BookList </a>
+    </h2>
+</button>
+<div id="form">
+    <form th:action="@{/save}" th:object="${bookList}" method="POST">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name</label>
+            <input style="border-radius: 10px;background-color: navajowhite" placeholder="book name" type="text"
+                   th:field="*{name}"/>
+        </div>
+        <div>
+            <label>Author</label>
+            <input style="border-radius: 10px;background-color: navajowhite" placeholder="book author" type="text"
+                   th:field="*{author}"/>
+        </div>
+        <div>
+            <label>Amount</label>
+            <input style="border-radius: 10px;background-color: navajowhite" placeholder="book amount" type="text"
+                   th:field="*{amount}"/>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+<footer th:replace="/layout :: footer">
+</footer>
+</body>
+</html>

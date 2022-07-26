@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Add Product</h3>
+<p>
+    <a th:href="@{/list}">
+        Back to ProductList
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/save}" th:object="${productDto}" method="POST">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name</label>
+            <p th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}"></p>
+            <input type="text" th:field="*{productName}"/>
+        </div>
+        <div>
+            <label>Price</label>
+            <p th:if="${#fields.hasErrors('productPrice')}" th:errors="*{productPrice}"></p>
+            <input type="text" th:field="*{productPrice}"/>
+        </div>
+        <div>
+            <label>Producer</label>
+            <p th:if="${#fields.hasErrors('producer')}" th:errors="*{producer}"></p>
+            <input type="text" th:field="*{producer}"/>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+<footer th:replace="/layout :: footer">
+</footer>
+</body>
+</html>
