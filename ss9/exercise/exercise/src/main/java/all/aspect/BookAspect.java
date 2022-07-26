@@ -1,4 +1,4 @@
-package all.Aspect;
+package all.aspect;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
