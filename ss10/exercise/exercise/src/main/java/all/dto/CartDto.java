@@ -31,4 +31,27 @@ public class CartDto {
             productMap.put(productDto, 1);
         }
     }
+
+    //tong tien
+    public Long countTotalPayment() {
+        long payment = 0;
+        for (Map.Entry<ProductDto, Integer> entry : productMap.entrySet()) {
+            payment += entry.getKey().getPrice() * (long) entry.getValue();
+        }
+        return payment;
+    }
+
+    public Integer countProductQuantity() {
+        Integer quantity = 0;
+        for (Map.Entry<ProductDto, Integer> entry : productMap.entrySet()) {
+            quantity += entry.getValue();
+        }
+        return quantity;
+    }
+
+    public Integer itemQuantity() {
+        return productMap.size();
+    }
+
+
 }

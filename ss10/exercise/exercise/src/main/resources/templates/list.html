@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <title>Shop</title>
     <style>
-        .ten-class-hieu-ung {
+        .card {
+            border-radius: 15px;
+        }
+
+        .card1 {
             background-color: white;
-            transition-duration: .4s;
+            transition-duration: .5s;
             transition-property: transform;
             transition-timing-function: ease-out;
         }
 
-        .ten-class-hieu-ung:hover {
+        .card1:hover {
             transform: translateY(-40px);
         }
     </style>
@@ -23,8 +27,8 @@
 <div class="row">
     <div class="col-3" style="float: right;margin-left: 1000px;margin-bottom: 20px">
         <button>
-            <a  th:href="@{/cart}" style="text-decoration: none">
-                <img width="30 30" src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="">View Your Cart
+            <a th:href="@{/cart}" style="text-decoration: none">
+                <img width="30 30" src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="">Xem giỏ hàng
             </a>
         </button>
     </div>
@@ -34,7 +38,7 @@
         <div class="col-3" th:each="product : ${product}">
             <div class="card" style="width: 18rem;">
                 <!-- Button modal -->
-                <button class="btn ten-class-hieu-ung" data-bs-toggle="modal"
+                <button style="border:none" class="btn card1" data-bs-toggle="modal"
                         th:data-bs-target="'#staticBackdropView' + ${product.id}">
                     <img th:src="@{${product.image}}" class="card-img-top p-5" width="100px" height="300px" alt="img">
                 </button>
@@ -42,44 +46,31 @@
                 <!-- Modal -->
                 <div class="modal fade" th:id="'staticBackdropView' + ${product.id}" data-bs-backdrop="static"
                      data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog" >
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="staticBackdropLabelView">View Detail</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
-                                <!-- Chi tiết sản phẩm  -->
-                                <div class="card" style="width:18rem;">
-                                    <img th:src="@{${product.image}}" class="card-img-top p-5"
-                                         width="100px" height="100% " alt="img">
+                            <div class="modal-body" >
+                                <img th:src="@{${product.image}}" class="card-img-top p-5"
+                                     width="100px" height="300px" alt="img">
+                                <div class="card-body">
+                                    <h5 class="card-title">Chi tiết sản phẩm</h5>
+                                    <p class="card-text" th:text="${product.description}"></p>
+                                </div>
+                            </div>
+                                <div class="card" style="width:100%;">
                                     <div class="card-body">
-                                        <h5 class="card-title">Chi tiết sản phẩm</h5>
-                                        <p class="card-text" th:text="${product.description}"></p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <strong>
-                                            <li>Discount</li>
-                                        </strong>
-                                        <li style="color: gold" class="list-group-item"
-                                            th:text="${product.discount} + '%' "></li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <button style="border-radius: 10px;background-color: burlywood">
-                                            <a style=";text-decoration: none" th:href="@{/product}" class="card-link">Back
-                                                Product</a>
-                                        </button>
                                         <button style="border-radius: 10px;background-color: burlywood">
                                             <a style="text-decoration: none" th:href="@{/product/add(id=${product.id})}"
                                                class="card-link">Mua Ngay</a>
                                         </button>
+                                        <button style="border-radius: 10px;background-color: burlywood"
+                                                data-bs-dismiss="modal">Close !
+                                        </button>
                                     </div>
-                                </div>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -87,7 +78,7 @@
 
                 <div class="card-body">
                     <p class="card-text" th:text="${product.name}"></p>
-                    <span class="card-text" style="text-decoration: line-through;color: red">20.000.000$</span>
+                    <span class="card-text" style="text-decoration: line-through;color: red">Khuyến mãi!</span>
                     <span class="card-text" th:text="${#numbers.formatCurrency(product.price)}"></span>
                 </div>
             </div>

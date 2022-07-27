@@ -4,13 +4,11 @@ import all.dto.CartDto;
 import all.dto.ProductDto;
 import all.model.Product;
 import all.service.IProductService;
-import org.aspectj.lang.annotation.After;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -50,12 +48,12 @@ public class ProductController {
         cookie.setPath("/");
         response.addCookie(cookie);
         model.addAttribute("product", productService.findById(id).orElse(null));
-        return "/detail";
+        return "payment";
     }
 
     @GetMapping("/add")
     public String addToCard(@RequestParam int id,
-                            @ModelAttribute("cart") CartDto cart) {
+                            @ModelAttribute("cart") CartDto cart,Model model) {
         Optional<Product> productDetail = productService.findById(id);
         //isPresent kiểm tra xem id có tồn tại hay chưa
         if (productDetail.isPresent()) {
@@ -66,5 +64,8 @@ public class ProductController {
         return "redirect:/cart";
     }
 
-
+    @GetMapping("/ok")
+    public String showPaymentPage(){
+        return "/payment";
+    }
 }
