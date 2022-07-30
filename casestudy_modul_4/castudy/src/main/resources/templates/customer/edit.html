@@ -3,29 +3,58 @@
 <head th:replace="/layout :: head">
 </head>
 <body>
-<h3>Edit Product</h3>
+<h3>Edit Customer</h3>
 <p>
-    <a th:href="@{/list}">
-        Back to product list
+    <a th:href="@{/customer}">
+        Back to Customer list
     </a>
 </p>
 <div id="form">
-    <form action="#" th:action="@{/edit}" th:object="${productDto}" method="POST">
+    <form action="#" th:action="@{/customer/edit}" th:object="${customerList}" method="POST">
         <input type="hidden" th:field="*{id}"/>
         <div>
             <label>Name</label>
-            <p th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}"></p>
-            <input  type="text" th:field="*{productName}"/>
+            <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+            <input type="text" th:field="*{name}"/>
         </div>
         <div>
-            <label>Price</label>
-            <p th:if="${#fields.hasErrors('productPrice')}" th:errors="*{productPrice}"></p>
-            <input  type="text" th:field="*{productPrice}"/>
+            <label>Day Of Birth</label>
+            <p th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"></p>
+            <input type="date" th:field="*{dateOfBirth}"/>
         </div>
         <div>
-            <label>Producer</label>
-            <p th:if="${#fields.hasErrors('producer')}" th:errors="*{producer}"></p>
-            <input  type="text" th:field="*{producer}"/>
+            <label>Gender</label>
+            <p th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}"></p>
+            <input class="form-check-input" type="radio" th:field="*{gender}" value="0">Nữ
+            <input class="form-check-input" type="radio" th:field="*{gender}" value="1">Nam
+            <input class="form-check-input" type="radio" th:field="*{gender}" value="2">Khác
+        </div>
+        <div>
+            <label>Id Card</label>
+            <p th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></p>
+            <input type="text" th:field="*{idCard}"/>
+        </div>
+        <div>
+            <label>Phone</label>
+            <p th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></p>
+            <input type="text" th:field="*{phone}"/>
+        </div>
+        <div>
+            <label>Email</label>
+            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+            <input type="text" th:field="*{email}"/>
+        </div>
+        <div>
+            <label>Address</label>
+            <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></p>
+            <input type="text" th:field="*{address}"/>
+        </div>
+        <div>
+            <label>Customer Type</label>
+            <select th:field="*{customerType}">
+                <option th:each="type: ${customerType}"
+                        th:value="${type.id}" th:text="${type.name}"></option>
+            </select>
         </div>
         <input type="submit" value="edit"/>
     </form>

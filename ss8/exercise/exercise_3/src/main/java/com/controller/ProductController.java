@@ -5,7 +5,6 @@ import com.model.Product;
 import com.service.IProductService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -24,11 +23,11 @@ public class ProductController {
     @Autowired
     IProductService productService;
 
+    //display all
     @GetMapping("/list")
     public String showList(@PageableDefault(value = 3) Pageable pageable, Model model,
                            @RequestParam Optional<String> name) {
-        //tim theo name...neu rong thi tra ve full list
-        model.addAttribute("product", productService.findAll(pageable,name.orElse("")));
+        model.addAttribute("product", productService.findAll(pageable, name.orElse("")));
         return "/list";
     }
 
@@ -74,5 +73,4 @@ public class ProductController {
         productService.update(product);
         return "redirect:/list";
     }
-
 }

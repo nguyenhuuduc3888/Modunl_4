@@ -3,7 +3,6 @@
 <head th:replace="/layout :: head">
 </head>
 <body>
-
 <h3>Add Product</h3>
 <p>
     <a th:href="@{/list}">
@@ -16,7 +15,6 @@
         <div>
             <label>Name</label>
             <p th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}"></p>
-
             <input type="text" th:field="*{productName}"/>
         </div>
         <div>

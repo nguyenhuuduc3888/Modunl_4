@@ -93,8 +93,9 @@
         <td th:text="${row.getProductPrice()}"></td>
         <td th:text="${row.getProductDescription()}"></td>
         <td th:text="${row.getProducer()}"></td>
+
+        //edit phan trang
         <td>
-            <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                     th:data-bs-target="'#staticBackdropEdit' + ${row.productId}">
                 Edit
@@ -134,8 +135,10 @@
                 </div>
             </div>
         </td>
+
+
+        //xem chi tiet phan trang
         <td>
-            <!-- Button trigger modal -->
             <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" th:data-bs-target="'#staticBackdropView' + ${row.productId}">
                 View
             </button>
@@ -177,8 +180,10 @@
                 </div>
             </div>
         </td>
+
+
+        //xoa phan trang
         <td>
-            <!-- Button trigger modal -->
             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
                     th:data-bs-target="'#staticBackdrop' + ${row.productId}">
                 Delete
@@ -207,6 +212,8 @@
                 </div>
             </div>
         </td>
+
+
     </tr>
     </tbody>
 </table>

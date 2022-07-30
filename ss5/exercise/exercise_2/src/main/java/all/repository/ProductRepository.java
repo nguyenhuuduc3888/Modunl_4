@@ -36,14 +36,20 @@ public class ProductRepository implements IProductRepository {
     @Override
     @Modifying
     public Product findById(int id) {
-       TypedQuery<Product> query = entityManager.createQuery("select s from Product as s where s.id = : id", Product.class).setParameter("id", id);
-       return query.getSingleResult();
+        TypedQuery<Product> query = entityManager.createQuery("select s from Product as s where s.id = : id", Product.class).setParameter("id", id);
+        return query.getSingleResult();
     }
 
     @Override
     public void delete(int id) {
         Product product = findById(id);
         entityManager.remove(product);
+    }
+
+    @Override
+    public List<Product> findByName(String name) {
+        TypedQuery<Product> query = entityManager.createQuery("select s from Product as s where s.productName like ?1", Product.class);
+        return query.setParameter(1, name).getResultList();
     }
 
 }

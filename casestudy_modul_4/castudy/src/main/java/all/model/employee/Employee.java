@@ -1,4 +1,4 @@
-package all.model;
+package all.model.employee;
 
 import javax.persistence.*;
 

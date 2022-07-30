@@ -13,7 +13,6 @@ import java.util.List;
 @Repository
 @Transactional
 public interface IProductRepository extends JpaRepository<Product, Integer> {
-
     @Modifying
     @Query(value = "select * from Product where product_name  like :name", nativeQuery = true)
     List<Product> findByName(@Param("name") String name);

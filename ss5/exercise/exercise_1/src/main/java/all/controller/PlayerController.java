@@ -13,7 +13,7 @@ public class PlayerController {
     @Autowired
     IPlayerService playerService;
 
-    @GetMapping("/list")
+    @GetMapping("/a")
     public ModelAndView showList() {
         ModelAndView modelAndView =
                 new ModelAndView("/list", "player", playerService.findAll());
@@ -31,14 +31,14 @@ public class PlayerController {
     public String save(@ModelAttribute("player") Player player) {
         player.setId((int) (Math.random() * 1000));
         playerService.save(player);
-        return "redirect:list";
+        return "redirect:a";
     }
 
     //Xoa
     @GetMapping("/delete")
     public String delete(@RequestParam int id) {
         playerService.delete(id);
-        return "redirect:list";
+        return "redirect:a";
     }
 
     //Cap nhat

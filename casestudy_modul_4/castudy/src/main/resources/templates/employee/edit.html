@@ -3,29 +3,70 @@
 <head th:replace="/layout :: head">
 </head>
 <body>
-<h3>Edit Product</h3>
+<h3>Edit Employee</h3>
 <p>
-    <a th:href="@{/list}">
-        Back to product list
+    <a th:href="@{/employee}">
+        Back to employee list
     </a>
 </p>
 <div id="form">
-    <form action="#" th:action="@{/edit}" th:object="${productDto}" method="POST">
+    <form action="#" th:action="@{/employee/edit}" th:object="${employeeDto}" method="POST">
         <input type="hidden" th:field="*{id}"/>
         <div>
             <label>Name</label>
-            <p th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}"></p>
-            <input  type="text" th:field="*{productName}"/>
+            <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+            <input type="text" th:field="*{name}"/>
         </div>
         <div>
-            <label>Price</label>
-            <p th:if="${#fields.hasErrors('productPrice')}" th:errors="*{productPrice}"></p>
-            <input  type="text" th:field="*{productPrice}"/>
+            <label>Day Of Birth</label>
+            <p th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"></p>
+            <input type="date" th:field="*{dateOfBirth}"/>
         </div>
         <div>
-            <label>Producer</label>
-            <p th:if="${#fields.hasErrors('producer')}" th:errors="*{producer}"></p>
-            <input  type="text" th:field="*{producer}"/>
+            <label>Id Card</label>
+            <p th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></p>
+            <input type="text" th:field="*{idCard}"/>
+        </div>
+        <div>
+            <label>Salary</label>
+            <p th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></p>
+            <input type="text" th:field="*{salary}"/>
+        </div>
+        <div>
+            <label>Phone</label>
+            <p th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></p>
+            <input type="text" th:field="*{phone}"/>
+        </div>
+        <div>
+            <label>Email</label>
+            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+            <input type="text" th:field="*{email}"/>
+        </div>
+        <div>
+            <label>Address</label>
+            <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></p>
+            <input type="text" th:field="*{address}"/>
+        </div>
+        <div>
+            <label>Position</label>
+            <select th:field="*{position}">
+                <option th:each="position: ${position}"
+                        th:value="${position.id}" th:text="${position.name}"></option>
+            </select>
+        </div>
+        <div>
+            <label>EducationDegree</label>
+            <select th:field="*{educationDegree}">
+                <option th:each="educationDegree: ${educationDegree}"
+                        th:value="${educationDegree.id}" th:text="${educationDegree.name}"></option>
+            </select>
+        </div>
+        <div>
+            <label>Division</label>
+            <select th:field="*{division}">
+                <option th:each="division: ${division}"
+                        th:value="${division.id}" th:text="${division.name}"></option>
+            </select>
         </div>
         <input type="submit" value="edit"/>
     </form>

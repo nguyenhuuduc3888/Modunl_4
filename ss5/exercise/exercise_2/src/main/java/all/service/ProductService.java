@@ -18,6 +18,11 @@ public class ProductService implements IProductService {
     }
 
     @Override
+    public List<Product> findByName(String name) {
+        return productRepository.findByName("%" + name + "%");
+    }
+
+    @Override
     public void delete(int id) {
         productRepository.delete(id);
     }

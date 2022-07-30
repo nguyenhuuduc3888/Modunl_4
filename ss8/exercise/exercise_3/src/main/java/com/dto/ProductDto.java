@@ -1,6 +1,5 @@
 package com.dto;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 public class ProductDto {

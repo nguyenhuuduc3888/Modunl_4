@@ -11,23 +11,19 @@
     </a>
 </p>
 <div id="form">
-    <form th:action="@{/save}" th:object="${player}" method="POST">
+    <form th:action="@{/save}" th:object="${blog}" method="POST">
         <input type="hidden" th:field="*{id}"/>
         <div>
             <label>Name</label>
-            <input required type="text" th:field="*{musicName}"/>
+            <input required type="text" th:field="*{blogName}"/>
         </div>
         <div>
-            <label>Person</label>
-            <input required  type="text" th:field="*{personName}"/>
+            <label>Detail</label>
+            <input required  type="text" th:field="*{blogDetail}"/>
         </div>
         <div>
             <label>Rent</label>
-            <input required type="text" th:field="*{rentMusic}"/>
-        </div>
-        <div>
-            <label>Link</label>
-            <input required type="text" th:field="*{link}"/>
+            <input required type="text" th:field="*{blogRent}"/>
         </div>
         <input type="submit" value="Save"/>
     </form>

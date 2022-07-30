@@ -11,30 +11,29 @@
 
 <p>
     <a th:href="@{/create}">
-        Add new player
+        Add new Blog
     </a>
 </p>
 
 <table id="products" class="table table-hover">
     <thead>
     <tr>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>PERSON</th>
-        <th>RENT</th>
-        <th>LINK</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Rent</th>
+        <th>ViewDetail</th>
         <th>Edit</th>
         <th>Delete</th>
+
     </tr>
     </thead>
     <tbody>
-    <tr th:each="row : ${player}">
+    <tr th:each="row : ${blog}">
         <td th:text="${row.getId()}"></td>
-        <td th:text="${row.getMusicName()}"></td>
-        <td th:text="${row.getPersonName()}"></td>
-        <td th:text="${row.getRentMusic()}"></td>
-        <td th:text="${row.getLink()}"></td>
-        <td><a th:href="@{/update(id=${row.id})}">edit</a></td>
+        <td th:text="${row.getBlogName()}"></td>
+        <td th:text="${row.getBlogRent()}"></td>
+        <td><a th:href="@{/view(id=${row.id})}">ViewDetail</a></td>
+        <td><a th:href="@{/update(id=${row.id})}">Edit</a></td>
         <td>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
@@ -53,7 +52,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Do you want delete product <span class="text-info" th:text="${row.musicName}"></span>
+                            Do you want delete product <span class="text-info" th:text="${row.blogName}"></span>
                             with id = <span class="text-info" th:text="${row.id}"></span>
                         </div>
                         <div class="modal-footer">

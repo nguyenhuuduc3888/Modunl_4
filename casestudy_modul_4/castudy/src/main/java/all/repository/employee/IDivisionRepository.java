@@ -1,4 +1,4 @@
-package all.repository;
+package all.repository.employee;
 
 import all.model.employee.Division;
 import org.springframework.data.jpa.repository.JpaRepository;

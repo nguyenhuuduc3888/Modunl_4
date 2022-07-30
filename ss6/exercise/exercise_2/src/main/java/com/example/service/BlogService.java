@@ -1,6 +1,4 @@
 package com.example.service;
-
-
 import com.example.model.Blog;
 
 import com.example.repository.IBlogRepository;
@@ -9,11 +7,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class BlogService implements IBlogService {
 
     @Autowired
     IBlogRepository blogRepository;
+
 
     @Override
     public List<Blog> findAll() {

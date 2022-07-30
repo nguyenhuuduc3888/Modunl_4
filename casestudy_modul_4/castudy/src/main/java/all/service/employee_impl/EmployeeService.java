@@ -1,8 +1,8 @@
-package all.service.ipml;
+package all.service.employee_impl;
 
-import all.model.Employee;
-import all.repository.IEmployeeRepository;
-import all.service.IEmployeeService;
+import all.model.employee.Employee;
+import all.repository.employee.IEmployeeRepository;
+import all.service.employee.IEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,7 +16,7 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public Page<Employee> findAll(Pageable pageable, String name) {
-        return employeeRepository.findAll(pageable, name);
+        return employeeRepository.findAll(pageable, "%"+name+"%");
     }
 
     @Override
@@ -27,7 +27,7 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public void update(Employee employee) {
         employeeRepository.update(employee.getName(), employee.getDateOfBirth(), employee.getIdCard(), employee.getSalary(),
-                employee.getPhone(), employee.getEmail(), employee.getAddress(), employee.getId());
+                employee.getPhone(), employee.getEmail(), employee.getAddress(),employee.getPosition(),employee.getEducationDegree(),employee.getDivision(), employee.getId());
     }
 
     @Override

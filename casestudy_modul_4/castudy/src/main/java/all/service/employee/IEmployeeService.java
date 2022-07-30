@@ -1,4 +1,4 @@
-package all.service.employer;
+package all.service.employee;
 
 import all.model.employee.Employee;
 import org.springframework.data.domain.Page;

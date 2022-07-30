@@ -9,11 +9,12 @@ public interface IProductService {
 
     void save(Product product);
 
-    void update( Product product);
+    void update(Product product);
 
     void delete(int id);
 
     Product findById(int id);
 
+    List<Product> findByName(String name);
 
 }

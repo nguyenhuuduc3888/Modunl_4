@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -7,47 +6,72 @@
           crossorigin="anonymous">
 </head>
 <body>
-<h3>Product</h3>
-
+<h3>Employee</h3>
 <div id="search">
-    <form th:action="@{/list}">
+    <form th:action="@{/employee}">
         <input type="text" placeholder="Input Search Name" name="name">
         <input type="submit" value="search">
     </form>
 </div>
-
 <p>
-    <a th:href="@{/create}">
-        Add new product
-    </a>
+<h3>
+    <button style="background-color: #cbbe73;border-radius: 10px">
+        <a style="text-decoration: none" th:href="@{/}">
+            Home
+        </a>
+    </button>
+</h3>
+<h3>
+    <button style="background-color: #cbbe73;border-radius: 10px">
+        <a style="text-decoration: none" th:href="@{/employee/create}">
+            Add new Employee
+        </a>
+    </button>
+</h3>
 </p>
 <table id="products" class="table table-hover">
     <thead>
     <tr>
         <th>STT</th>
         <th>Name</th>
-        <th>Price</th>
-        <th>Producer</th>
+        <th>Day Of Birth</th>
+        <th>Id Card</th>
+        <th>Salary</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Position</th>
+        <th>Education Degree</th>
+        <th>Division</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="row,rowStar: ${product}">
+    <tr th:each="e,rowStar: ${employee}">
         <td th:text="${rowStar.count}"></td>
-        <td th:text="${row.getProductName()}"></td>
-        <td th:text="${row.getProductPrice()}"></td>
-        <td th:text="${row.getProducer()}"></td>
-        <td><a th:href="@{/update(id=${row.id})}">edit</a></td>
+        <td th:text="${e.getName()}"></td>
+        <td th:text="${e.getDateOfBirth()}"></td>
+        <td th:text="${e.getIdCard()}"></td>
+        <td th:text="${e.getSalary()}"></td>
+        <td th:text="${e.getPhone()}"></td>
+        <td th:text="${e.getEmail()}"></td>
+        <td th:text="${e.getAddress()}"></td>
+        <td th:text="${e.getPosition().getName()}"></td>
+        <td th:text="${e.getEducationDegree().getName()}"></td>
+        <td th:text="${e.getDivision().getName()}"></td>
         <td>
-            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-danger">
+                <a style="color: red;text-decoration: none" th:href="@{/employee/update(id=${e.id})}">Edit</a>
+            </button>
+        </td>
+        <!-- Xóa Modal-->
+        <td>
             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
-                    th:data-bs-target="'#staticBackdrop' + ${row.id}">
-                Delete
+                    th:data-bs-target="'#staticBackdrop' + ${e.id}"> Delete
             </button>
 
-            <!-- Modal -->
-            <div class="modal fade" th:id="staticBackdrop + ${row.id}" data-bs-backdrop="static"
+            <div class="modal fade" th:id="staticBackdrop + ${e.id}" data-bs-backdrop="static"
                  data-bs-keyboard="false"
                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -57,11 +81,11 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Do you want delete product <span class="text-info" th:text="${row.productName}"></span>
-                            with id = <span class="text-info" th:text="${row.id}"></span>
+                            Do you want delete Employee <span class="text-info" th:text="${e.name}"></span>
+                            with id = <span class="text-info" th:text="${e.id}"></span>
                         </div>
                         <div class="modal-footer">
-                            <a th:href="@{/delete(id=${row.id})}" class="btn btn-outline-success">Delete</a>
+                            <a th:href="@{/employee/delete(id=${e.id})}" class="btn btn-outline-success">Delete</a>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -71,13 +95,12 @@
     </tr>
     </tbody>
 </table>
-
 <center>
-    <a th:href="@{'/list'(page=${product.number - 1},name = ${name})}" th:if="${product.hasPrevious()}">Previous</a>
-    <span th:text="${product.number + 1}"></span>/<span th:text="${product.totalPages}"></span>
-    <a th:href="@{'/list'(page=${product.number + 1},name = ${name})}" th:if="${product.hasNext()}">Next</a>
+    <a th:href="@{'/employee'(page=${employee.number - 1},name = ${name})}"
+       th:if="${employee.hasPrevious()}">Previous</a>
+    <span th:text="${employee.number + 1}"></span>/<span th:text="${employee.totalPages}"></span>
+    <a th:href="@{'/employee'(page=${employee.number + 1},name = ${name})}" th:if="${employee.hasNext()}">Next</a>
 </center>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

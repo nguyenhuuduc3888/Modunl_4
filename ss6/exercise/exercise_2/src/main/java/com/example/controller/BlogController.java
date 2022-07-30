@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.ModelAndView;
+
 
 
 @Controller
@@ -17,12 +18,11 @@ public class BlogController {
 
     //hien thi
     @GetMapping("/list")
-    public String showList(Model model) {
-        model.addAttribute("blog", blogService.findAll());
-        return "/list";
+    public ModelAndView findAll() {
+        ModelAndView modelAndView = new ModelAndView("/list","blog",blogService.findAll());
+        return modelAndView;
     }
 
-    //them moi
     @GetMapping("/create")
     private String showFormCreate(Model model) {
         model.addAttribute("blog", new Blog());
@@ -63,4 +63,5 @@ public class BlogController {
         blogService.delete(id);
         return "redirect:list";
     }
+
 }

@@ -55,4 +55,10 @@ public class ProductController {
         return "redirect:list";
     }
 
+    @GetMapping("/search")
+    public String search(String name, Model model) {
+        model.addAttribute("product", productService.findByName(name));
+        return "list";
+    }
+
 }
