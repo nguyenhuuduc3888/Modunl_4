@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"   xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head >
     <meta charset="UTF-8">
     <title>Title</title>
 
@@ -10,35 +10,35 @@
 </head>
 <body>
 <h3>Category</h3>
-<p>
+<p  sec:authorize="hasAnyRole('adm','user')">
     <a th:href="@{/list}">
         Back to blog list
     </a>
 </p>
 
-<p>
+<p sec:authorize="hasRole('adm')">
     <a th:href="@{/createcategory}">
         ADD new Category
     </a>
 </p>
 
-<table id="products" class="table table-hover">
+<table sec:authorize="hasAnyRole('adm','user')" id="products" class="table table-hover">
     <thead>
     <tr>
         <th>STT</th>
         <th>Name</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th sec:authorize="hasRole('adm')">Edit</th>
+        <th sec:authorize="hasRole('adm')">Delete</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="row ,rowc: ${categoryList}">
         <td th:text="${rowc.count}"></td>
         <td th:text="${row.getCategoryName}"></td>
-        <td><a th:href="@{/updatecategory(id=${row.categoryId})}">Edit</a></td>
+        <td sec:authorize="hasRole('adm')" ><a th:href="@{/updatecategory(id=${row.categoryId})}">Edit</a></td>
         <td>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+            <button sec:authorize="hasRole('adm')" type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
                     th:data-bs-target="'#staticBackdrop' + ${row.categoryId}">
                 Delete
             </button>
