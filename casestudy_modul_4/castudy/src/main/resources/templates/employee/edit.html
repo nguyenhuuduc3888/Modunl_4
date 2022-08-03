@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/layout :: head">
+    <style>
+        p {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 <h3>Edit Employee</h3>
-<p>
+<h4>
     <a th:href="@{/employee}">
         Back to employee list
     </a>
-</p>
+</h4>
 <div id="form">
     <form action="#" th:action="@{/employee/edit}" th:object="${employeeDto}" method="POST">
         <input type="hidden" th:field="*{id}"/>

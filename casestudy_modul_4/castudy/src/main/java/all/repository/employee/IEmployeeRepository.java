@@ -14,8 +14,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 public interface IEmployeeRepository extends JpaRepository<Employee, Integer> {
-
-
     @Transactional
     @Modifying
     @Query(value = "update employee set name =:name,date_of_birth=:dateOfBirth,id_card=:idCard," +

@@ -4,29 +4,45 @@ import all.model.employee.Division;
 import all.model.employee.EducationDegree;
 import all.model.employee.Position;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 public class EmployeeDto {
     private int id;
-    @NotBlank(message = "Khong duoc de trong")
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp = "^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ]" +
+            "[a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*" +
+            "(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ]" +
+            "[a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$", message = "Sai định dạng ,Tên phải viết hoa tất cả chữ cái đầu")
     private String name;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
     private String dateOfBirth;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp = "^[0-9]{9}|[0-9]{12}$", message = "Số CMND phải đúng định dạng 9 số hoặc 12 số (X là số 0-9).")
     private String idCard;
-    @NotNull(message = "Khong duoc de trong")
+
+    @NotNull(message = "Không được để trống")
+    @Min(value = 0, message = "Tiền cọc phải là số nguyên dương")
     private Double salary;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp = "^(090|091|8490|8491)+([0-9]{7})$", message = "Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx.")
     private String phone;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = " Địa chỉ email phải đúng định dạng... abc@gmail.com")
     private String email;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
     private String address;
+
     private Position position;
     private EducationDegree educationDegree;
     private Division division;
-
 
 
     public EmployeeDto() {

@@ -3,17 +3,47 @@ package all.dto;
 import all.model.facility.FacilityType;
 import all.model.facility.RentType;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
 public class FacilityDto {
     private int id;
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp = "^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ]" +
+            "[a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*" +
+            "(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ]" +
+            "[a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$", message = "Sai định dạng ,Tên phải viết hoa tất cả chữ cái đầu")
     private String name;
+
+    @NotNull(message = "Không được để trống")
     private int area;
+
+    @NotNull(message = "Không được để trống")
+    @Min(value = 1, message = "Tiền cọc phải là số nguyên dương")
     private Double cost;
+
+    @NotNull(message = "Không được để trống")
+    @Min(value = 1, message = "Số người phải là số nguyên dương")
     private int maxPeople;
+
+    @NotBlank(message = "Không được để trống")
     private String standardRoom;
+
+    @NotBlank(message = "Không được để trống")
     private String description;
+
+    @NotNull(message = "Không được để trống")
     private Double poolArea;
+
+    @NotNull(message = "Không được để trống")
+    @Min(value = 1, message = "Số tầng phải là số nguyên dương")
     private int numberFloor;
+
+    @NotBlank(message = "Không được để trống")
     private String facilityFree;
+
     private FacilityType facilityType;
     private RentType rentType;
 

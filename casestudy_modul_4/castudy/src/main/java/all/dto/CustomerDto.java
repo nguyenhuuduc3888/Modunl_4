@@ -8,20 +8,34 @@ import javax.validation.constraints.Pattern;
 
 public class CustomerDto {
     private int id;
-    @NotBlank(message = "Không đển trống")
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp = "^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ]" +
+            "[a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*" +
+            "(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ]" +
+            "[a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$", message = "Sai định dạng ,Tên phải viết hoa tất cả chữ cái đầu")
     private String name;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
     private String dateOfBirth;
-    @NotNull(message = "Khong duoc de trong")
+
+    @NotNull(message = "Không được để trống")
     private Integer gender;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp = "^[0-9]{9}|[0-9]{12}$", message = "Số CMND phải đúng định dạng 9 số hoặc 12 số (X là số 0-9).")
     private String idCard;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp = "^(090|091|8490|8491)+([0-9]{7})$", message = "Số điện thoại phải đúng định dạng 10 số bắt đầu là  090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx.")
     private String phone;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = " Địa chỉ email phải đúng định dạng... abc@gmail.com")
     private String email;
-    @NotBlank(message = "Khong duoc de trong")
+
+    @NotBlank(message = "Không được để trống")
     private String address;
+
     private CustomerType customerType;
 
     public CustomerDto() {
