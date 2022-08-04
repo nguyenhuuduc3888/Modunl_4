@@ -20,7 +20,7 @@
         <div>
             <label>Day Of Birth</label>
             <p th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"></p>
-            <input type="date" th:field="*{dateOfBirth}"/>
+            <input type="date" th:field="*{dateOfBirth}" style="width: 100%;height:100%;"/>
         </div>
         <div>
             <label>Gender</label>
@@ -51,7 +51,7 @@
         </div>
         <div>
             <label>Customer Type</label>
-            <select th:field="*{customerType}">
+            <select th:field="*{customerType}" style="width: 100%;height:100%;">
                 <option th:each="type: ${customerType}"
                         th:value="${type.id}" th:text="${type.name}"></option>
             </select>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Add Contract</h3>
+<h4>
+    <a th:href="@{/contract}">
+        Back to Contract List
+    </a>
+</h4>
+<div id="form">
+    <form th:action="@{/contract/save}" th:object="${contractDto}" method="POST">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Day Start</label>
+            <p th:if="${#fields.hasErrors('dayStart')}" th:errors="*{dayStart}"></p>
+            <input type="date" th:field="*{dayStart}" style="width: 100%;height:100%;"/>
+        </div>
+        <div>
+            <label>Day End</label>
+            <p th:if="${#fields.hasErrors('dayEnd')}" th:errors="*{dayEnd}"></p>
+            <input type="date" th:field="*{dayEnd}"  style="width: 100%;height:100%;"/>
+        </div>
+        <div>
+            <label>Tiền Cọc</label>
+            <p th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></p>
+            <input type="text" th:field="*{deposit}"/>
+        </div>
+        <div>
+            <label>Customer</label>
+            <select th:field="*{customer}" style="width: 100%;height:100%;">
+                <option th:each="type: ${customerService}"
+                        th:value="${type.id}" th:text="${type.name}"></option>
+            </select>
+        </div>
+        <div >
+            <label>Employee</label>
+            <select th:field="*{employee}" style="width: 100%;height:100%;">
+                <option th:each="type: ${employeeService}"
+                        th:value="${type.id}" th:text="${type.name}"></option>
+            </select>
+        </div>
+        <div >
+            <label>Facility</label>
+            <select th:field="*{facility}" style="width: 100%;height:100%;">
+                <option th:each="type: ${facilityService}"
+                        th:value="${type.id}" th:text="${type.name}" ></option>
+            </select>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+<footer th:replace="/layout :: footer">
+</footer>
+</body>
+</html>

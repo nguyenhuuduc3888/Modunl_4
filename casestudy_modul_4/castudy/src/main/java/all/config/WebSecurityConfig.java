@@ -37,12 +37,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/home").permitAll()
-                .antMatchers("/employee").permitAll()
-                .antMatchers("/**").hasRole("admim")
                 .antMatchers("/employee").hasRole("user")
-                .antMatchers("/home").hasRole("user")
+                .antMatchers("/**").hasRole("admim")
                 .and()
-                .authorizeRequests().anyRequest().authenticated();
+                .authorizeRequests().anyRequest().authenticated()
+                .and()
+                .exceptionHandling().accessDeniedPage("/err");
     }
 
     @Bean

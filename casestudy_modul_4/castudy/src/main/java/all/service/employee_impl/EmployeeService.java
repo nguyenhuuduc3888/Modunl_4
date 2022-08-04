@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EmployeeService implements IEmployeeService {
 
@@ -38,5 +40,10 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public Employee findById(Integer id) {
         return employeeRepository.findById(id).orElse(null);
+    }
+//tìm kiếm không phân trang
+    @Override
+    public List<Employee> find() {
+        return employeeRepository.findAll();
     }
 }

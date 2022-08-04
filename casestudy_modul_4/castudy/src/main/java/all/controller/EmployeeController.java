@@ -9,6 +9,7 @@ import all.service.employee.IPositionService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,34 +32,23 @@ public class EmployeeController {
     IPositionService positionService;
 
     //display all  nhớ thêm "%" + name +"%"
+    //Sap xep tang dan theo ten va dia chi
     @GetMapping("")
-    public String showList(@PageableDefault(value = 3) Pageable pageable, Model model,
+    public String showList(@PageableDefault(value = 3,sort = "name",direction = Sort.Direction.ASC)
+                               Pageable pageable, Model model,
                            @RequestParam Optional<String> name) {
+        model.addAttribute("position", positionService.finAll());
+        model.addAttribute("division", divisionService.findAll());
+        model.addAttribute("educationDegree", educationDegreeService.finAll());
+        model.addAttribute("employeeCreate", new Employee());
         model.addAttribute("name",name.orElse(""));
         model.addAttribute("employee", employeeService.findAll(pageable, name.orElse("")));
         return "employee/list";
     }
 
-    //Them moi
-    @GetMapping("/create")
-    public String showFormEdit(Model model) {
-        model.addAttribute("employeeDto", new Employee());
-        model.addAttribute("position", positionService.finAll());
-        model.addAttribute("division", divisionService.findAll());
-        model.addAttribute("educationDegree", educationDegreeService.finAll());
-        return "employee/create";
-    }
-
+    //them moi
     @PostMapping("/save")
-    public String save(@Valid @ModelAttribute("employeeDto") EmployeeDto employeeDto, BindingResult bindingResult, Model model) {
-        model.addAttribute("position", positionService.finAll());
-        model.addAttribute("division", divisionService.findAll());
-        model.addAttribute("educationDegree", educationDegreeService.finAll());
-        if (bindingResult.hasErrors()) {
-            return "employee/create";
-        }
-        Employee employee = new Employee();
-        BeanUtils.copyProperties(employeeDto, employee);
+    public String save( Employee employee){
         employeeService.save(employee);
         return "redirect:/employee";
     }
