@@ -5,6 +5,10 @@
           rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
     <style>
+        body{
+            background-image: url("https://resortdanang.info/wp-content/uploads/2018/11/ho-boi-hyatt-resort-da-nang.jpg");
+            background-size: cover;
+        }
         p {
             color: red !important;
         }
@@ -17,7 +21,8 @@
         Back to facility list
     </a>
 </h4>
-<div class="container">
+<center>
+<div class="container mb-2 bg-primary text-white">
     <form th:action="@{/facility/save}" th:object="${facilityDto}" method="post" novalidate="novalidate">
         <div class="mb-3">
             <input type="hidden" th:field="*{id}" class="form-control">
@@ -43,7 +48,7 @@
             <p th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></p>
             <input type="number" th:field="*{maxPeople}" class="form-control">
         </div>
-        <div class="mb-3" style="background-color: #cbbe73;color: wheat">
+        <div class="mb-3" >
             <label class="form-label">Kiểu thuê</label>
             <select class="form-select" th:field="*{rentType}">
                 <option th:each="item : ${rentType}"
@@ -51,7 +56,7 @@
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label" style="background-color: #cbbe73;color: wheat">Loại dịch vụ</label>
+            <label class="form-label" >Loại dịch vụ</label>
             <select class="form-select" th:field="*{facilityType}" id="select-facility"
                     onchange="onchangeFacility(this.value)">
                 <option th:each="item : ${facilityType}"
@@ -86,7 +91,8 @@
         <input type="submit" value="Save"/>
     </form>
 </div>
-<!--<script src="jquery-3.5.1.min.js"></script>-->
+</center>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     function onchangeFacility(value) {

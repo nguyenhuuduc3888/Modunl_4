@@ -37,7 +37,7 @@ public class CustomerController {
     //them moi
     @GetMapping("/create")
     public String showFormCreate(Model model) {
-        model.addAttribute("customerDto", new Customer());
+        model.addAttribute("customerDto", new CustomerDto());
         model.addAttribute(("customerType"), customerTypeService.findAll());
         return "customer/create";
     }

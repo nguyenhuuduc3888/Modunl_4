@@ -4,34 +4,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" \
           rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
+    <style>
+        td {
+            color: gold !important;
+        }
+    </style>
 </head>
 <body>
-<div style="background-color: #046056">
-    <h2>Hello:</h2>
-    <h2 sec:authentication="principal.username"></h2>
-</div>
+<center>
+    <div>
+        <span style="font-family: Papyrus;font-size: 50px;color: saddlebrown">Hello: </span>
+        <span style="font-family: Papyrus;font-size: 50px;color: gold" sec:authentication="principal.username"></span>
+    </div>
+</center>
 <h3>Employee</h3>
 <div id="search">
     <form th:action="@{/employee}">
-        <input type="text" placeholder="Input Search Name" name="name">
-        <input type="submit" value="search">
+        <input style="border-radius: 10px"
+               type="text"
+               placeholder="Input Search Name" name="name">
+        <input style="border-radius: 10px"
+               type="submit" value="search">
     </form>
 </div>
 <p>
 <h3>
-    <button style="background-color: #cbbe73;border-radius: 10px">
-        <a style="text-decoration: none" th:href="@{/home}">
+    <button style="border-radius: 10px">
+        <a style="text-decoration: none" th:href="@{/}">
+            <img width=" 40 40" src="https://cdn-icons-png.flaticon.com/512/6396/6396585.png">
             Home
         </a>
     </button>
 </h3>
-<h3 sec:authorize="hasRole('admim')">
-    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
-            th:data-bs-target="'#staticBackdropCreate'"> Create
-    </button>
-</h3>
+
 </p>
-<table sec:authorize="hasAnyRole('admim','user')" id="products" class="table table-hover">
+<table sec:authorize="hasAnyRole('admin','user')" id="products" class="table table-hover">
     <thead>
     <tr>
         <th>STT</th>
@@ -45,13 +52,13 @@
         <th>Position</th>
         <th>Education Degree</th>
         <th>Division</th>
-        <th sec:authorize="hasRole('admim')">Edit</th>
-        <th sec:authorize="hasRole('admim')">Delete</th>
+        <th sec:authorize="hasRole('admin')">Edit</th>
+        <th sec:authorize="hasRole('admin')">Delete</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="e,rowStar: ${employee}">
-        <td th:text="${rowStar.count}"></td>
+        <td th:text="${rowStar.count+ 3 * employee.number}"></td>
         <td th:text="${e.getName()}"></td>
         <td th:text="${e.getDateOfBirth()}"></td>
         <td th:text="${e.getIdCard()}"></td>
@@ -62,14 +69,14 @@
         <td th:text="${e.getPosition().getName()}"></td>
         <td th:text="${e.getEducationDegree().getName()}"></td>
         <td th:text="${e.getDivision().getName()}"></td>
-        <td sec:authorize="hasRole('admim')">
+        <td sec:authorize="hasRole('admin')">
             <button type="button" class="btn btn-outline-danger">
                 <a style="color: red;text-decoration: none" th:href="@{/employee/update(id=${e.id})}">Edit</a>
             </button>
         </td>
 
         <!-- Xóa Modal-->
-        <td sec:authorize="hasRole('admim')">
+        <td sec:authorize="hasRole('admin')">
             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
                     th:data-bs-target="'#staticBackdrop' + ${e.id}"> Delete
             </button>
@@ -105,34 +112,35 @@
                             <h5 class="modal-title" id="staticBackdropLabelCreate">Modal title</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body p-3 mb-2 bg-primary text-white " >
                             <div>
                                 <form th:action="@{/employee/save}" th:object="${employeeCreate}" method="POST">
                                     <input type="hidden" th:field="*{id}"/>
                                     <div>
                                         <label>Name</label>
                                         <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
-                                        <input type="text" th:field="*{name}"/>
+                                        <input required type="text" th:field="*{name}"/>
                                     </div>
                                     <div>
                                         <label>Day Of Birth</label>
                                         <p th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"></p>
-                                        <input type="date" th:field="*{dateOfBirth}" style="width: 100%;height:100%;"/>
+                                        <input required type="date" th:field="*{dateOfBirth}"
+                                               style="width: 100%;height:100%;"/>
                                     </div>
                                     <div>
                                         <label>Id Card</label>
                                         <p th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></p>
-                                        <input type="text" th:field="*{idCard}"/>
+                                        <input required type="text" th:field="*{idCard}"/>
                                     </div>
                                     <div>
                                         <label>Salary</label>
                                         <p th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></p>
-                                        <input type="text" th:field="*{salary}"/>
+                                        <input required type="text" th:field="*{salary}"/>
                                     </div>
                                     <div>
                                         <label>Phone</label>
                                         <p th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></p>
-                                        <input type="text" th:field="*{phone}"/>
+                                        <input required type="text" th:field="*{phone}"/>
                                     </div>
                                     <div>
                                         <label>Email</label>
@@ -142,7 +150,7 @@
                                     <div>
                                         <label>Address</label>
                                         <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></p>
-                                        <input type="text" th:field="*{address}"/>
+                                        <input required type="text" th:field="*{address}"/>
                                     </div>
                                     <div>
                                         <label>Position</label>
@@ -184,10 +192,19 @@
     </tbody>
 </table>
 <center>
-    <a th:href="@{'/employee'(page=${employee.number - 1},name = ${name})}"
+    <h3 sec:authorize="hasRole('admin')">
+        <button style="border-radius: 10px " type="button" class="btn btn-outline-danger"
+                data-bs-toggle="modal"
+                th:data-bs-target="'#staticBackdropCreate'">
+            <img width="35 35" src="https://cdn-icons-png.flaticon.com/512/1387/1387940.png"> Create
+        </button>
+    </h3>
+    <a style="color: darkorange;font-weight: bold;font-size: 20px"
+       th:href="@{'/employee'(page=${employee.number - 1},name = ${name})}"
        th:if="${employee.hasPrevious()}">Previous</a>
     <span th:text="${employee.number + 1}"></span>/<span th:text="${employee.totalPages}"></span>
-    <a th:href="@{'/employee'(page=${employee.number + 1},name = ${name})}" th:if="${employee.hasNext()}">Next</a>
+    <a style="color: darkorange;font-weight: bold;font-size: 20px"
+       th:href="@{'/employee'(page=${employee.number + 1},name = ${name})}" th:if="${employee.hasNext()}">Next</a>
 </center>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

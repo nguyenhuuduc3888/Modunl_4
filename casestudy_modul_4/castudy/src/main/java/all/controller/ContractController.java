@@ -52,7 +52,7 @@ public class ContractController {
 
     @GetMapping("/create")
     public String showFormCreate(Model model) {
-        model.addAttribute("contractDto", new Contract());
+        model.addAttribute("contractDto", new ContractDto());
         model.addAttribute(("employeeService"), employeeService.find());
         model.addAttribute(("facilityService"), facilityService.find());
         model.addAttribute(("customerService"), customerService.find());

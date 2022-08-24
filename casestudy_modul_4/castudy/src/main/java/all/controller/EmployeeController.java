@@ -31,8 +31,6 @@ public class EmployeeController {
     @Autowired
     IPositionService positionService;
 
-    //display all  nhớ thêm "%" + name +"%"
-    //Sap xep tang dan theo ten va dia chi
     @GetMapping("")
     public String showList(@PageableDefault(value = 3,sort = "name",direction = Sort.Direction.ASC)
                                Pageable pageable, Model model,
@@ -55,7 +53,7 @@ public class EmployeeController {
 
     //Xoa
     @GetMapping("/delete")
-    public String delete(@RequestParam int id) {
+    public String delete( int id) {
         employeeService.delete(id);
         return "redirect:/employee";
     }
@@ -80,7 +78,7 @@ public class EmployeeController {
         }
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDto, employee);
-        employeeService.update(employee);
+        employeeService.save(employee);
         return "redirect:/employee";
     }
 }

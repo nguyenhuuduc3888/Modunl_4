@@ -1,4 +1,4 @@
-package all.service.facility_impl;
+package all.service.user.facility_impl;
 
 import all.model.facility.FacilityType;
 import all.repository.facility.IFacilityTypeRepository;

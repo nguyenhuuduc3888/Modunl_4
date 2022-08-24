@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/layout :: head">
+    <style>
+        body{
+            background-image: url("https://resortdanang.info/wp-content/uploads/2018/11/ho-boi-hyatt-resort-da-nang.jpg");
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
 <h3>Add Contract</h3>
@@ -9,7 +15,8 @@
         Back to Contract List
     </a>
 </h4>
-<div id="form">
+<center>
+<div id="form" class="mb-2 bg-primary text-white">
     <form th:action="@{/contract/save}" th:object="${contractDto}" method="POST">
         <input type="hidden" th:field="*{id}"/>
         <div>
@@ -51,6 +58,7 @@
         <input type="submit" value="Save"/>
     </form>
 </div>
+</center>
 <footer th:replace="/layout :: footer">
 </footer>
 </body>

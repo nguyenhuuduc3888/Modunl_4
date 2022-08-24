@@ -10,8 +10,4 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/err")
-    public String pageErr(){
-        return "/err";
-    }
 }

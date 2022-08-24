@@ -1,25 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" \
           rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
-    <style>
-        td{
-            color: gold !important;
-        }
-    </style>
 </head>
 <body>
-<center>
-    <div>
-        <span style="font-family: Papyrus;font-size: 50px;color: saddlebrown" >Hello: </span>
-        <span style="font-family: Papyrus;font-size: 50px;color: gold" sec:authentication="principal.username"></span>
-    </div>
-</center>
-<h3>Customer</h3>
+<h3>Hello</h3>
 <div id="search">
-    <form th:action="@{/customer}">
+    <form th:action="@{/tintuc}">
         <input style="border-radius: 10px"
                type="text" placeholder="Input Search Name" name="name">
         <input style="border-radius: 10px"
@@ -41,32 +30,25 @@
     <thead>
     <tr>
         <th>STT</th>
-        <th>Name</th>
-        <th>Day Of Birth</th>
-        <th>Gender</th>
-        <th>Id Card</th>
-        <th>Phone</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Customer Type</th>
+        <th>Tieu De</th>
+        <th>Danh Muc</th>
+        <th>Ngay Dang tin</th>
+        <th>Phong Vien</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="c,rowStar: ${customerList}">
-        <td th:text="${rowStar.count+3*customerList.number}"></td>
-        <td th:text="${c.getName()}"></td>
-        <td th:text="${c.getDateOfBirth()}"></td>
-        <td th:text="${c.getGender()==0?'Nữ':'Nam'}"></td>
-        <td th:text="${c.getIdCard()}"></td>
-        <td th:text="${c.getPhone()}"></td>
-        <td th:text="${c.getEmail()}"></td>
-        <td th:text="${c.getAddress()}"></td>
-        <td th:text="${c.getCustomerType().getName()}"></td>
+    <tr th:each="c,rowStar: ${tintuc}">
+        <td th:text="${rowStar.count+3*tintuc.number}"></td>
+        <td th:text="${c.getTieuDe()}"></td>
+        <td th:text="${c.danhMuc.getName()}"></td>
+        <td th:text="${c.getNgayDangTin()}"></td>
+        <td th:text="${c.getPhongVien()}"></td>
+
         <td>
             <button type="button" class="btn btn-outline-danger">
-                <a style="color: red;text-decoration: none" th:href="@{/customer/update(id=${c.id})}">Edit</a>
+                <a style="color: red;text-decoration: none" th:href="@{/tintuc/update(id=${c.id})}">XEM CHI TIET</a>
             </button>
         </td>
         <td>
@@ -87,11 +69,11 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Do you want delete Customer <span class="text-info" th:text="${c.name}"></span>
+                            Do you want delete Tin tuc <span class="text-info" th:text="${c.tieuDe}"></span>
                             with id = <span class="text-info" th:text="${c.id}"></span>
                         </div>
                         <div class="modal-footer">
-                            <a th:href="@{/customer/delete(id=${c.id})}" class="btn btn-outline-success">Delete</a>
+                            <a th:href="@{/tintuc/delete(id=${c.id})}" class="btn btn-outline-success">Delete</a>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -104,13 +86,13 @@
 <center>
     <h3>
         <button style="border-radius: 10px">
-            <a style="text-decoration: none" th:href="@{/customer/create}">
+            <a style="text-decoration: none" th:href="@{/tintuc/create}">
                 <img width="40 40" src="https://cdn-icons-png.flaticon.com/512/1387/1387940.png">Create</a>
         </button>
     </h3>
-    <a style="color: darkorange;font-weight: bold;font-size: 20px" th:href="@{'/customer'(page=${customerList.number - 1},name=${name})}" th:if="${customerList.hasPrevious()}">Previous</a>
-    <span th:text="${customerList.number + 1}"></span>/<span th:text="${customerList.totalPages}"></span>
-    <a  style="color: darkorange;font-weight: bold;font-size: 20px" th:href="@{'/customer'(page=${customerList.number + 1},name=${name})}" th:if="${customerList.hasNext()}">Next</a>
+    <a style="color: darkorange;font-weight: bold;font-size: 20px" th:href="@{'/tintuc'(page=${tintuc.number - 1},name=${name})}" th:if="${tintuc.hasPrevious()}">Previous</a>
+    <span th:text="${tintuc.number + 1}"></span>/<span th:text="${tintuc.totalPages}"></span>
+    <a  style="color: darkorange;font-weight: bold;font-size: 20px" th:href="@{'/tintuc'(page=${tintuc.number + 1},name=${name})}" th:if="${tintuc.hasNext()}">Next</a>
 </center>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
